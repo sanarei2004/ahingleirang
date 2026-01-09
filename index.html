@@ -54,7 +54,7 @@ body {
   border: none;
 }
 
-/* SHRINK.IO OVERLAY BUTTON (FAKE DRIVE ICON) */
+/* SHRINK.IO OVERLAY BUTTON */
 .drive-overlay-btn {
   position: absolute;
   top: 12px;
@@ -76,17 +76,41 @@ body {
   transform: scale(0.95);
 }
 
-/* DOWNLOAD BUTTON */
-.download-btn {
-  display: inline-block;
+/* BOTTOM BUTTONS */
+.bottom-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
   margin: 25px auto 40px;
-  background: #1db954;
-  color: #000;
+  flex-wrap: wrap;
+}
+
+/* SHARE BUTTON */
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a73e8;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  padding: 15px 22px;
-  border-radius: 10px;
-  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 22px;
+  border-radius: 24px;
+  font-size: 15px;
+}
+
+/* TELEGRAM BUTTON */
+.telegram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #229ED9;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 14px 22px;
+  border-radius: 24px;
+  font-size: 15px;
 }
 
 /* MOBILE FIX */
@@ -94,7 +118,6 @@ body {
   .site-logo {
     width: 210px;
   }
-
   .drive-overlay-btn {
     top: 10px;
     right: 10px;
@@ -130,13 +153,24 @@ body {
 
   </div>
 
-  <!-- OPTIONAL GREEN DOWNLOAD BUTTON -->
-  <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
-     target="_blank"
-     rel="noopener"
-     class="download-btn">
-     ⬇ DOWNLOAD LOCAL VIDEO
-  </a>
+  <!-- BOTTOM ACTION BUTTONS -->
+  <div class="bottom-actions">
+
+    <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
+       target="_blank"
+       rel="noopener"
+       class="share-btn">
+       📤 Share
+    </a>
+
+    <a href="https://t.me/YOUR_TELEGRAM_CHANNEL"
+       target="_blank"
+       rel="noopener"
+       class="telegram-btn">
+       ✈️ Join Telegram
+    </a>
+
+  </div>
 
 </div>
 
