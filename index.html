@@ -6,66 +6,100 @@
 <title>Video Page</title>
 
 <style>
-  body {
-    margin: 0;
-    background: #000;
-    font-family: Arial, sans-serif;
-    color: #fff;
-  }
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  user-select: none;
+}
 
-  .container {
-    max-width: 900px;
-    margin: auto;
-    padding: 15px;
-    text-align: center;
-  }
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+}
 
-  /* LOGO */
+/* LOGO */
+.site-logo {
+  width: 180px;
+  max-width: 70%;
+  margin: 25px auto;
+  display: block;
+}
+
+/* VIDEO WRAPPER */
+.video-wrapper {
+  position: relative;
+  max-width: 360px;
+  margin: auto;
+}
+
+/* VIDEO BOX */
+.video-box {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #111;
+}
+
+.video-box iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* SHRINK.IO OVERLAY BUTTON (FAKE DRIVE ICON) */
+.drive-overlay-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  z-index: 50;
+}
+
+.drive-overlay-btn:active {
+  transform: scale(0.95);
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+  display: inline-block;
+  margin: 25px auto 40px;
+  background: #1db954;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
   .site-logo {
-    width: 180px;
-    max-width: 70%;
-    height: auto;
-    margin: 25px auto;
-    display: block;
+    width: 210px;
   }
 
-  /* VIDEO BOX */
-  .video-box {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    border-radius: 14px;
-    overflow: hidden;
-    background: #111;
+  .drive-overlay-btn {
+    top: 10px;
+    right: 10px;
   }
-
-  .video-box iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  /* DOWNLOAD BUTTON */
-  .download-btn {
-    display: inline-block;
-    margin: 25px auto 0;
-    background: #1db954;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 15px 22px;
-    border-radius: 10px;
-    font-size: 16px;
-  }
-
-  /* MOBILE LOGO SIZE */
-  @media (max-width: 768px) {
-    .site-logo {
-      width: 210px;
-    }
-  }
+}
 </style>
 </head>
 
@@ -76,19 +110,32 @@
   <!-- LOGO -->
   <img src="logo.png" alt="Logo" class="site-logo">
 
-  <!-- VIDEO (GOOGLE DRIVE EMBED) -->
-  <div class="video-box">
-    <iframe
-      src="https://drive.google.com/file/d/1UAmva2Hrqd-IfsKnRUGfSzcXOdzmr4i7/preview"
-      allow="autoplay"
-      allowfullscreen>
-    </iframe>
+  <!-- VIDEO + OVERLAY -->
+  <div class="video-wrapper">
+
+    <div class="video-box">
+      <iframe
+        src="https://drive.google.com/file/d/1UAmva2Hrqd-IfsKnRUGfSzcXOdzmr4i7/preview"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- SHRINK.IO OVERLAY LINK -->
+    <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
+       target="_blank"
+       rel="noopener"
+       class="drive-overlay-btn">
+       ⤢
+    </a>
+
   </div>
 
-  <!-- DOWNLOAD BUTTON -->
-  <a href="https://drive.google.com/uc?export=download&id=1UAmva2Hrqd-IfsKnRUGfSzcXOdzmr4i7"
+  <!-- OPTIONAL GREEN DOWNLOAD BUTTON -->
+  <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
+     target="_blank"
+     rel="noopener"
      class="download-btn">
-    ⬇ DOWNLOAD LOCAL VIDEO
+     ⬇ DOWNLOAD LOCAL VIDEO
   </a>
 
 </div>
