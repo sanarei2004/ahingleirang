@@ -76,62 +76,44 @@ body {
   transform: scale(0.95);
 }
 
-/* DOWNLOAD BUTTON (FULL WIDTH) */
-.download-wrap {
+/* FULL-WIDTH BUTTON WRAPPER */
+.full-btn-wrap {
   display: flex;
   justify-content: center;
-  margin: 25px auto 15px;
+  margin-top: 14px;
 }
 
-.download-btn {
+/* BASE FULL BUTTON STYLE */
+.full-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   width: 100%;
   max-width: 360px;
-  background: #1db954;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
   padding: 16px 0;
   border-radius: 14px;
   font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-/* SOCIAL BUTTONS */
-.social-actions {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+/* DOWNLOAD */
+.download-btn {
+  background: #1db954;
+  color: #000;
 }
 
+/* WHATSAPP */
 .whatsapp-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   background: #25D366;
   color: #000;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 14px 22px;
-  border-radius: 24px;
-  font-size: 15px;
 }
 
+/* TELEGRAM */
 .telegram-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   background: #229ED9;
   color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 14px 22px;
-  border-radius: 24px;
-  font-size: 15px;
 }
 
 /* MOBILE FIX */
@@ -174,33 +156,34 @@ body {
 
   </div>
 
-  <!-- DOWNLOAD (FULL WIDTH) -->
-  <div class="download-wrap">
+  <!-- DOWNLOAD -->
+  <div class="full-btn-wrap">
     <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
        target="_blank"
        rel="noopener"
-       class="download-btn">
+       class="full-btn download-btn">
        ⬇ Download
     </a>
   </div>
 
-  <!-- WHATSAPP + TELEGRAM -->
-  <div class="social-actions">
-
+  <!-- WHATSAPP -->
+  <div class="full-btn-wrap">
     <a href="https://chat.whatsapp.com/YOUR_WHATSAPP_GROUP"
        target="_blank"
        rel="noopener"
-       class="whatsapp-btn">
+       class="full-btn whatsapp-btn">
        🟢 Join WhatsApp
     </a>
+  </div>
 
+  <!-- TELEGRAM -->
+  <div class="full-btn-wrap">
     <a href="https://t.me/YOUR_TELEGRAM_CHANNEL"
        target="_blank"
        rel="noopener"
-       class="telegram-btn">
+       class="full-btn telegram-btn">
        ✈️ Join Telegram
     </a>
-
   </div>
 
 </div>
