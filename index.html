@@ -76,7 +76,7 @@ body {
   transform: scale(0.95);
 }
 
-/* BOTTOM BUTTONS */
+/* BOTTOM BUTTONS WRAPPER */
 .bottom-actions {
   display: flex;
   gap: 12px;
@@ -85,15 +85,15 @@ body {
   flex-wrap: wrap;
 }
 
-/* SHARE BUTTON */
-.share-btn {
+/* DOWNLOAD BUTTON */
+.download-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #1a73e8;
-  color: #fff;
+  background: #1db954;
+  color: #000;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   padding: 14px 22px;
   border-radius: 24px;
   font-size: 15px;
@@ -106,6 +106,20 @@ body {
   gap: 8px;
   background: #229ED9;
   color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 14px 22px;
+  border-radius: 24px;
+  font-size: 15px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #000;
   text-decoration: none;
   font-weight: 500;
   padding: 14px 22px;
@@ -156,13 +170,23 @@ body {
   <!-- BOTTOM ACTION BUTTONS -->
   <div class="bottom-actions">
 
+    <!-- DOWNLOAD -->
     <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
        target="_blank"
        rel="noopener"
-       class="share-btn">
-       📤 Share
+       class="download-btn">
+       ⬇ Download
     </a>
 
+    <!-- WHATSAPP -->
+    <a href="https://chat.whatsapp.com/YOUR_WHATSAPP_GROUP"
+       target="_blank"
+       rel="noopener"
+       class="whatsapp-btn">
+       🟢 Join WhatsApp
+    </a>
+
+    <!-- TELEGRAM -->
     <a href="https://t.me/YOUR_TELEGRAM_CHANNEL"
        target="_blank"
        rel="noopener"
