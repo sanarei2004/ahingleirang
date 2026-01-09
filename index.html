@@ -54,7 +54,7 @@ body {
   border: none;
 }
 
-/* SHRINK.IO OVERLAY */
+/* SHRINK.IO OVERLAY ICON */
 .drive-overlay-btn {
   position: absolute;
   top: 12px;
@@ -76,21 +76,26 @@ body {
   transform: scale(0.95);
 }
 
-/* DOWNLOAD (ALONE) */
+/* DOWNLOAD BUTTON (FULL WIDTH) */
 .download-wrap {
+  display: flex;
+  justify-content: center;
   margin: 25px auto 15px;
 }
 
 .download-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  width: 100%;
+  max-width: 360px;
   background: #1db954;
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  padding: 15px 26px;
-  border-radius: 26px;
+  padding: 16px 0;
+  border-radius: 14px;
   font-size: 16px;
 }
 
@@ -159,7 +164,7 @@ body {
       </iframe>
     </div>
 
-    <!-- OVERLAY SHRINK -->
+    <!-- OVERLAY SHRINK ICON -->
     <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
        target="_blank"
        rel="noopener"
@@ -169,7 +174,7 @@ body {
 
   </div>
 
-  <!-- DOWNLOAD ONLY -->
+  <!-- DOWNLOAD (FULL WIDTH) -->
   <div class="download-wrap">
     <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
        target="_blank"
