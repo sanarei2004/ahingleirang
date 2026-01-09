@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Page</title>
+
+<style>
+  body {
+    margin: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* LOGO */
+  .site-logo {
+    width: 180px;
+    max-width: 70%;
+    height: auto;
+    margin: 25px auto;
+    display: block;
+  }
+
+  /* VIDEO BOX */
+  .video-box {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #111;
+  }
+
+  .video-box iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* DOWNLOAD BUTTON */
+  .download-btn {
+    display: inline-block;
+    margin: 25px auto 0;
+    background: #1db954;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 22px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  /* MOBILE LOGO SIZE */
+  @media (max-width: 768px) {
+    .site-logo {
+      width: 210px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO -->
+  <img src="logo.png" alt="Logo" class="site-logo">
+
+  <!-- VIDEO (GOOGLE DRIVE EMBED) -->
+  <div class="video-box">
+    <iframe
+      src="https://drive.google.com/file/d/1UAmva2Hrqd-IfsKnRUGfSzcXOdzmr4i7/preview"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- DOWNLOAD BUTTON -->
+  <a href="https://drive.google.com/uc?export=download&id=1UAmva2Hrqd-IfsKnRUGfSzcXOdzmr4i7"
+     class="download-btn">
+    ⬇ DOWNLOAD LOCAL VIDEO
+  </a>
+
+</div>
+
+</body>
+</html>
