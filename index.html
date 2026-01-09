@@ -54,7 +54,7 @@ body {
   border: none;
 }
 
-/* SHRINK.IO OVERLAY BUTTON */
+/* SHRINK.IO OVERLAY */
 .drive-overlay-btn {
   position: absolute;
   top: 12px;
@@ -76,16 +76,11 @@ body {
   transform: scale(0.95);
 }
 
-/* BOTTOM BUTTONS WRAPPER */
-.bottom-actions {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin: 25px auto 40px;
-  flex-wrap: wrap;
+/* DOWNLOAD (ALONE) */
+.download-wrap {
+  margin: 25px auto 15px;
 }
 
-/* DOWNLOAD BUTTON */
 .download-btn {
   display: inline-flex;
   align-items: center;
@@ -94,18 +89,26 @@ body {
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  padding: 14px 22px;
-  border-radius: 24px;
-  font-size: 15px;
+  padding: 15px 26px;
+  border-radius: 26px;
+  font-size: 16px;
 }
 
-/* TELEGRAM BUTTON */
-.telegram-btn {
+/* SOCIAL BUTTONS */
+.social-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #229ED9;
-  color: #fff;
+  background: #25D366;
+  color: #000;
   text-decoration: none;
   font-weight: 500;
   padding: 14px 22px;
@@ -113,13 +116,12 @@ body {
   font-size: 15px;
 }
 
-/* WHATSAPP BUTTON */
-.whatsapp-btn {
+.telegram-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #25D366;
-  color: #000;
+  background: #229ED9;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   padding: 14px 22px;
@@ -147,7 +149,7 @@ body {
   <!-- LOGO -->
   <img src="logo.png" alt="Logo" class="site-logo">
 
-  <!-- VIDEO + OVERLAY -->
+  <!-- VIDEO -->
   <div class="video-wrapper">
 
     <div class="video-box">
@@ -157,7 +159,7 @@ body {
       </iframe>
     </div>
 
-    <!-- SHRINK.IO OVERLAY LINK -->
+    <!-- OVERLAY SHRINK -->
     <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
        target="_blank"
        rel="noopener"
@@ -167,18 +169,19 @@ body {
 
   </div>
 
-  <!-- BOTTOM ACTION BUTTONS -->
-  <div class="bottom-actions">
-
-    <!-- DOWNLOAD -->
+  <!-- DOWNLOAD ONLY -->
+  <div class="download-wrap">
     <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
        target="_blank"
        rel="noopener"
        class="download-btn">
        ⬇ Download
     </a>
+  </div>
 
-    <!-- WHATSAPP -->
+  <!-- WHATSAPP + TELEGRAM -->
+  <div class="social-actions">
+
     <a href="https://chat.whatsapp.com/YOUR_WHATSAPP_GROUP"
        target="_blank"
        rel="noopener"
@@ -186,7 +189,6 @@ body {
        🟢 Join WhatsApp
     </a>
 
-    <!-- TELEGRAM -->
     <a href="https://t.me/YOUR_TELEGRAM_CHANNEL"
        target="_blank"
        rel="noopener"
