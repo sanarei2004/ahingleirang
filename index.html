@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Page</title>
+<title>Home</title>
 
 <style>
 body {
@@ -11,119 +11,57 @@ body {
   background: #000;
   font-family: Arial, sans-serif;
   color: #fff;
-  user-select: none;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 15px;
+/* HEADER */
+.header {
   text-align: center;
+  padding: 15px;
 }
 
-/* LOGO */
-.site-logo {
-  width: 180px;
-  max-width: 70%;
-  margin: 25px auto;
+.header img {
+  width: 160px;
+}
+
+/* VIDEO GRID (YOUTUBE STYLE) */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+  padding: 15px;
+}
+
+/* VIDEO CARD */
+.video-card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+}
+
+.video-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   display: block;
 }
 
-/* VIDEO WRAPPER */
-.video-wrapper {
-  position: relative;
-  max-width: 360px;
-  margin: auto;
+/* INFO */
+.video-info {
+  padding: 10px;
 }
 
-/* VIDEO BOX */
-.video-box {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #111;
-}
-
-.video-box iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* SHRINK.IO OVERLAY ICON */
-.drive-overlay-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 44px;
-  height: 44px;
-  background: rgba(0,0,0,0.7);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 20px;
-  text-decoration: none;
-  z-index: 50;
-}
-
-.drive-overlay-btn:active {
-  transform: scale(0.95);
-}
-
-/* FULL-WIDTH BUTTON WRAPPER */
-.full-btn-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 14px;
-}
-
-/* BASE FULL BUTTON STYLE */
-.full-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  max-width: 360px;
-  padding: 16px 0;
-  border-radius: 14px;
-  font-size: 16px;
+.video-title {
+  font-size: 14px;
   font-weight: bold;
-  text-decoration: none;
+  line-height: 1.3;
 }
 
-/* DOWNLOAD */
-.download-btn {
-  background: #1db954;
-  color: #000;
-}
-
-/* WHATSAPP */
-.whatsapp-btn {
-  background: #25D366;
-  color: #000;
-}
-
-/* TELEGRAM */
-.telegram-btn {
-  background: #229ED9;
-  color: #fff;
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .site-logo {
-    width: 210px;
-  }
-  .drive-overlay-btn {
-    top: 10px;
-    right: 10px;
+/* MOBILE */
+@media (max-width: 480px) {
+  .header img {
+    width: 140px;
   }
 }
 </style>
@@ -131,60 +69,43 @@ body {
 
 <body>
 
-<div class="container">
+<!-- HEADER -->
+<div class="header">
+  <img src="logo.png" alt="Logo">
+</div>
 
-  <!-- LOGO -->
-  <img src="logo.png" alt="Logo" class="site-logo">
+<!-- VIDEO LIST -->
+<div class="video-grid">
 
-  <!-- VIDEO -->
-  <div class="video-wrapper">
-
-    <div class="video-box">
-      <iframe
-        src="https://drive.google.com/file/d/1NlOAHGR1rfbOL6hrTZqycY-dUCMGJlD6/preview"
-        allowfullscreen>
-      </iframe>
+  <!-- VIDEO 1 -->
+  <a href="video1.html" class="video-card">
+    <img
+      src="https://drive.google.com/thumbnail?id=1NlOAHGR1rfbOL6hrTZqycY-dUCMGJlD6&sz=w640"
+      alt="Video 1">
+    <div class="video-info">
+      <div class="video-title">🔥 Full Video Clip</div>
     </div>
+  </a>
 
-    <!-- OVERLAY SHRINK ICON -->
-    <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
-       target="_blank"
-       rel="noopener"
-       class="drive-overlay-btn">
-       ⤢
-    </a>
+  <!-- VIDEO 2 -->
+  <a href="video2.html" class="video-card">
+    <img
+      src="https://drive.google.com/thumbnail?id=VIDEO_ID_2&sz=w640"
+      alt="Video 2">
+    <div class="video-info">
+      <div class="video-title">🎬 Must Watch Video</div>
+    </div>
+  </a>
 
-  </div>
-
-  <!-- DOWNLOAD -->
-  <div class="full-btn-wrap">
-    <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
-       target="_blank"
-       rel="noopener"
-       class="full-btn download-btn">
-       ⬇ Download
-    </a>
-  </div>
-
-  <!-- WHATSAPP -->
-  <div class="full-btn-wrap">
-    <a href="https://chat.whatsapp.com/YOUR_WHATSAPP_GROUP"
-       target="_blank"
-       rel="noopener"
-       class="full-btn whatsapp-btn">
-       🟢 Join WhatsApp
-    </a>
-  </div>
-
-  <!-- TELEGRAM -->
-  <div class="full-btn-wrap">
-    <a href="https://t.me/YOUR_TELEGRAM_CHANNEL"
-       target="_blank"
-       rel="noopener"
-       class="full-btn telegram-btn">
-       ✈️ Join Telegram
-    </a>
-  </div>
+  <!-- VIDEO 3 -->
+  <a href="video3.html" class="video-card">
+    <img
+      src="https://drive.google.com/thumbnail?id=VIDEO_ID_3&sz=w640"
+      alt="Video 3">
+    <div class="video-info">
+      <div class="video-title">💥 Viral Clip</div>
+    </div>
+  </a>
 
 </div>
 
