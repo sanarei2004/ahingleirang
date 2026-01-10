@@ -29,14 +29,13 @@ body {
   display: block;
 }
 
-/* VIDEO WRAPPER */
+/* VIDEO */
 .video-wrapper {
   position: relative;
   max-width: 360px;
   margin: auto;
 }
 
-/* VIDEO BOX */
 .video-box {
   position: relative;
   width: 100%;
@@ -69,14 +68,12 @@ body {
   color: #fff;
   font-size: 20px;
   text-decoration: none;
-  z-index: 50;
 }
 
-/* BUTTON WRAPPER */
+/* FULL WIDTH WRAPPER (MATCHES DOWNLOAD) */
 .full-btn-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 14px;
+  max-width: 360px;
+  margin: 14px auto 0;
 }
 
 /* BUTTON BASE */
@@ -86,39 +83,29 @@ body {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  max-width: 360px;
   padding: 16px 0;
   border-radius: 14px;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  background: #FFA500;     /* ORANGE */
-  color: #000;             /* BLACK TEXT */
+  background: #FFA500;
+  color: #000;
 }
 
-/* SIDE BY SIDE BUTTONS */
+/* SIDE BY SIDE (ALIGNED WITH DOWNLOAD) */
 .side-btn-wrap {
   display: flex;
   gap: 12px;
-  justify-content: center;
-  margin-top: 14px;
+  width: 100%;
 }
 
 .side-btn-wrap .full-btn {
   width: 50%;
-  max-width: 174px;
 }
 
-/* ACTIVE PRESS EFFECT */
+/* PRESS EFFECT */
 .full-btn:active {
   transform: scale(0.97);
-}
-
-/* MOBILE FIX */
-@media (max-width: 480px) {
-  .side-btn-wrap .full-btn {
-    max-width: none;
-  }
 }
 </style>
 </head>
@@ -132,7 +119,6 @@ body {
 
   <!-- VIDEO -->
   <div class="video-wrapper">
-
     <div class="video-box">
       <iframe
         src="https://drive.google.com/file/d/1NlOAHGR1rfbOL6hrTZqycY-dUCMGJlD6/preview"
@@ -140,15 +126,11 @@ body {
       </iframe>
     </div>
 
-    <!-- OVERLAY LINK -->
     <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
-       class="drive-overlay-btn">
-       ⤢
-    </a>
-
+       class="drive-overlay-btn">⤢</a>
   </div>
 
-  <!-- DOWNLOAD BUTTON -->
+  <!-- DOWNLOAD -->
   <div class="full-btn-wrap">
     <a href="https://shrinkme.io/YOUR_SHRINK_LINK"
        class="full-btn">
@@ -156,19 +138,21 @@ body {
     </a>
   </div>
 
-  <!-- WHATSAPP + TELEGRAM SIDE BY SIDE -->
-  <div class="side-btn-wrap">
+  <!-- WHATSAPP + TELEGRAM (PERFECTLY ALIGNED) -->
+  <div class="full-btn-wrap">
+    <div class="side-btn-wrap">
 
-    <a href="https://chat.whatsapp.com/YOUR_WHATSAPP_GROUP"
-       class="full-btn">
-       🟢 WhatsApp
-    </a>
+      <a href="https://chat.whatsapp.com/YOUR_WHATSAPP_GROUP"
+         class="full-btn">
+         🟢 WhatsApp
+      </a>
 
-    <a href="https://t.me/YOUR_TELEGRAM_CHANNEL"
-       class="full-btn">
-       ✈️ Telegram
-    </a>
+      <a href="https://t.me/YOUR_TELEGRAM_CHANNEL"
+         class="full-btn">
+         ✈️ Telegram
+      </a>
 
+    </div>
   </div>
 
 </div>
